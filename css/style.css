@@ -880,3 +880,12 @@ form {
   .offset-by-one-half.columns     { margin-left: 52%; }
 
 }
+
+.borrar-curso {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
