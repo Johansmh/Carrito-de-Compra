@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce - Home</title>
+    <link rel="stylesheet" href="css/normalice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="container">
+            <div class="row">
+                <div class="contenedor-nombre">
+                    <h1 class="nombre-sitio">Librería Cristiana <span>Palabra que Inspira</span></h1>
+                </div>
+                <div class="contenedor-carrito">
+                        <ul>
+                            <li class="submenu">
+                                <img src="img/cart.png" id="img-carrito">
+                                <div id="carrito">
+                                    <table id="lista-carrito" class="u-full-width">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th>Cantidad</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                                </div>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="contenedor-navegacion">
+        <nav class="nav-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="biblia.html">Biblia</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="blog.html">Blog</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </div>
+
+    <div class="hero"></div>
+
+    <section class="contenedor categorias">
+        <h2 class="text-center">Categoria de Productos</h2>
+        <div class="listado-categorias">
+            <div class="categoria izquierda">
+                <img src="img/Biblia de estudio teologico1.jpg" alt="iblia de estudio teologico">
+                <a href="#">Biblia de estudio</a>
+            </div>
+            <div class="categoria">
+                <img src="img/Biblia devocional mujer verdadera1.jpg" alt="iblia devocional mujer verdadera">
+                <a href="#">Biblia para dama</a>
+            </div>
+            <div class="categoria derecha">
+                <img src="img/Biblia para niños azul1.jpg" alt="Biblia para niños azul">
+                <a href="#">Biblia para niña</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre-nosotros">
+        <div class="contenedor sobre-nosotros-grid">
+            <div class="texto-nosotros">
+                <h2>Sobre nosotros</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta repudiandae, est itaque quasi impedit
+                    modi
+                    ullam! Iusto, soluta at, tempore enim nobis ipsa quasi animi cum, expedita blanditiis commodi fuga!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <main class="contenido-principal" id="listado-productos">
+        <h2 class="text-center">Nuestros productos</h2>
+        <div class="listado-productos contenedor">
+            <div class="producto">
+                <img src="img/Biblia de estudio teologico1.jpg" alt="Biblia de estudio teologico">
+                <div class="texto-producto">
+                    <h3>Producto 1</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere cumque culpa eum deleniti
+                        cupiditate sit alias pariatur dicta atque libero. Iure facilis sit facere corrupti explicabo
+                        possimus</p>
+                    <p class="precio">$ 300.000</p>
+                    <a class="btn agregar-carrito" href="#" data-id="1">Agregar al carrito</a>
+                </div> <!--Info del producto 1-->
+            </div> <!--Producto-->
+            <div class="producto">
+                <img src="img/Biblia devocional mujer verdadera1.jpg" alt="Biblia de estudio teologico">
+                <div class="texto-producto">
+                    <h3>Producto 2</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere cumque culpa eum deleniti
+                        cupiditate sit alias pariatur dicta atque libero. Iure facilis sit facere corrupti explicabo
+                        possimus, culpa modi in.</p>
+                    <p class="precio">$ 300.000</p>
+                    <a class="btn agregar-carrito" href="#" data-id="2">Agregar al carrito</a>
+                </div> <!--Info del producto 1-->
+            </div> <!--Producto-->
+            <div class="producto">
+                <img src="img/Biblia para niños azul1.jpg" alt="Biblia de estudio teologico">
+                <div class="texto-producto">
+                    <h3>Producto 3</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere cumque culpa eum deleniti
+                        cupiditate sit alias pariatur dicta atque libero. Iure facilis sit facere corrupti explicabo
+                        possimus, culpa modi in.</p>
+                    <p class="precio">$ 300.000</p>
+                    <a class="btn agregar-carrito" href="#" data-id="3">Agregar al carrito</a>
+                </div> <!--Info del producto 1-->
+            </div> <!--Producto-->
+            <div class="producto">
+                <img src="img/Dialogo con Dios.jpg" alt="Biblia de estudio teologico">
+                <div class="texto-producto">
+                    <h3>Producto 4</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere cumque culpa eum deleniti
+                        cupiditate sit alias pariatur dicta atque libero. Iure facilis sit facere corrupti explicabo
+                        possimus, culpa modi in.</p>
+                    <p class="precio">$ 300.000</p>
+                    <a class="btn agregar-carrito" href="#" data-id="4">Agregar al carrito</a>
+                </div> <!--Info del producto 1-->
+            </div> <!--Producto-->
+            <div class="producto">
+                <img src="img/Himnario manatial de inspiracion.jpg" alt="Biblia de estudio teologico">
+                <div class="texto-producto">
+                    <h3>Producto 5</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere cumque culpa eum deleniti
+                        cupiditate sit alias pariatur dicta atque libero. Iure facilis sit facere corrupti explicabo
+                        possimus, culpa modi in.</p>
+                    <p class="precio">$ 300.000</p>
+                    <a class="btn agregar-carrito" href="#" data-id="5">Agregar al carrito</a>
+                </div> <!--Info del producto 1-->
+            </div> <!--Producto-->
+            <div class="producto">
+                <img src="img/Una historia que no termina III.jpg" alt="Biblia de estudio teologico">
+                <div class="texto-producto">
+                    <h3>Producto 6</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere cumque culpa eum deleniti
+                        cupiditate sit alias pariatur dicta atque libero. Iure facilis sit facere corrupti explicabo
+                        possimus, culpa modi in.</p>
+                    <p class="precio">$ 300.000</p>
+                    <a class="btn agregar-carrito" href="#" data-id="6">Agregar al carrito</a>
+                </div> <!--Info del producto 1-->
+            </div> <!--Producto-->
+        </div> <!--Fin del producto-->
+    </main>
+
+    <footer class="site-footer ">
+        <div class="grid-footer contenedor ">
+            <div>
+                <h3>Categorias</h3>
+                <nav class="footer-menu">
+                    <a href="#">Biblias de estudio</a>
+                    <a href="#">Biblias para Caballeros</a>
+                    <a href="#">Biblias para Damas</a>
+                    <a href="#">Biblias para Niños</a>
+                    <a href="#">Biblias para Niñas</a>
+                    <a href="#">Himnarios</a>
+                </nav>
+            </div>
+            <div>
+                <h3>Sobre nosotros</h3>
+                <nav class="footer-menu">
+                    <a href="#">Biblias de estudio</a>
+                    <a href="#">Biblias para Caballeros</a>
+                    <a href="#">Biblias para Damas</a>
+                </nav>
+            </div>
+            <div>
+                <h3>Soporte</h3>
+                <nav class="footer-menu">
+                    <a href="#">Biblias de estudio</a>
+                    <a href="#">Biblias para Caballeros</a>
+                    <a href="#">Biblias para Damas</a>
+
+                </nav>
+            </div>
+        </div>
+        <p class="copyright">Todos los derechos reservados de la libreria cristiana Palabra que Inspira</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

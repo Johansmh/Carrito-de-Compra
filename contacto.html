@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce - Contacto</title>
+    <link rel="stylesheet" href="css/normalice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <head>
+        <h1 class="nombre-sitio">Librería Cristiana <span>Palabra que Inspira</span></h1>
+    </head>
+    <div class="contenedor-navegacion">
+        <nav class="nav-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="biblia.html">Biblia</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="blog.html">Blog</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </div>
+
+    <main class="contenido-principal">
+        <h2 class="text-center">Contacto</h2>
+        <form action="" class="formulario">
+            <fieldset>
+                <legend>Tus datos</legend>
+                <div class="campo">
+                    <label for="nombre">Nombre:</label>
+                    <input id="nombre" type="text" placeholder="Inregse su nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="asunto">Asunto:</label>
+                    <input id="asunto" type="text" placeholder="Inregse el asunto">
+                </div>
+                <div class="campo">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" placeholder="Inregse su email">
+                </div>
+                <div class="campo">
+                    <label for="tel">Telefono:</label>
+                    <input id="tel" type="tel" placeholder="Inregse su telefono">
+                </div>
+                <div class="campo">
+                    <label for="fecha">fecha:</label>
+                    <input id="fecha" type="date">
+                </div>
+                <div class="campo">
+                    <label for="texto">Mensaje:</label>
+                    <textarea name="" id=""></textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Asunto</legend>
+                <div class="campo">
+                    <label for="pais">Pais:</label>
+                    <select name="pais" id="pais">
+                        <option disabled value="">-- Seleccionar--</option>
+                        <option value="CO">Colombia</option>
+                        <option value="VE">Venezuela</option>
+                        <option value="EC">Ecuador</option>
+                        <option value="PR">Peru</option>
+                        <option value="BZ">Brazil</option>
+                        <option value="SU">Surinan</option>
+                        <option value="BV">Bolivia</option>
+                        <option value="PA">Paraguay</option>
+                        <option value="UR">Uruguay</option>
+                        <option value="CL">Chile</option>
+                        <option value="AR">Argentina</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Información extra</legend>
+                <div class="campo">
+                    <label for="cliente">Cliente</label>
+                    <input id="cliente" type="radio" name="tipo" value="cliente">
+                </div>
+                <div class="campo">
+                    <label for="proveedor">Proveedor</label>
+                    <input id="proveedor" type="radio" name="tipo" value="proveedor">
+                </div>
+                <div class="campo">
+                    <label for="categoria">Categoria de interes</label>
+                    <input list="categoria" type="text" name="categoria">
+                    <datalist id="categoria">
+                        <option value="Estudio">
+                        <option value="Caballeros">
+                        <option value="Damas">
+                        <option value="Juvenil">
+                        <option value="Niños">
+                        <option value="Niñas">
+                        <option value="Personalizada">
+                    </datalist>
+                </div>
+            </fieldset>
+            <button class="btn" type="submit" value="button">Enviar formulario</button>
+        </form>
+    </main>
+
+    <footer class="site-footer ">
+        <div class="grid-footer contenedor">
+            <div>
+                <h3>Categorias</h3>
+                <nav class="footer-menu">
+                    <a href="#">Biblias de estudio</a>
+                    <a href="#">Biblias para Caballeros</a>
+                    <a href="#">Biblias para Damas</a>
+                    <a href="#">Biblias para Niños</a>
+                    <a href="#">Biblias para Niñas</a>
+                    <a href="#">Himnarios</a>
+                </nav>
+            </div>
+            <div>
+                <h3>Sobre nosotros</h3>
+                <nav class="footer-menu">
+                    <a href="#">Biblias de estudio</a>
+                    <a href="#">Biblias para Caballeros</a>
+                    <a href="#">Biblias para Damas</a>
+                </nav>
+            </div>
+            <div>
+                <h3>Soporte</h3>
+                <nav class="footer-menu">
+                    <a href="#">Biblias de estudio</a>
+                    <a href="#">Biblias para Caballeros</a>
+                    <a href="#">Biblias para Damas</a>
+
+                </nav>
+            </div>
+        </div>
+        <p class="copyright">Todos los derechos reservados de la libreria cristiana Palabra que Inspira</p>
+    </footer>
+</body>
+
+</html>
