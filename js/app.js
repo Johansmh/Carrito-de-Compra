@@ -16,6 +16,8 @@ cargarEventListener()
 function cargarEventListener() {
     contenido.addEventListener('click', agregarProducto)
 
+    // 8. Elimina productos del carrito
+    carrito.addEventListener('click', eliminarProducto)
 }
 
 /* ------------------------------------------------------------------- */
@@ -34,7 +36,18 @@ function agregarProducto(e) {
     }
 }
 
-// 4. Leer el contenido del HTML al que le dimos click y extrae la información del producto
+// 8.2 Elimina un producto del carrito
+function eliminarProducto(e) {
+    if(e.target.classList.contains('borrar-producto')) {
+        const productoId = e.target.getAttribute('data-id');
+
+        // Elimina del arreglo de articulosCarrito por el data-id
+        articulosCarrito = articulosCarrito.filter(producto => producto.id !== productoId)
+        carritoHTML(); // Iterar sobre el carrito y mostrar su HTML
+    }
+}
+
+// 4. Leemos el contenido del HTML al que le dimos click y extrae la información del producto
 function leerDatosProducto(producto) {
     //console.log(producto)
 
@@ -48,11 +61,32 @@ function leerDatosProducto(producto) {
     }
     //console.log(infoProducto)
 
+    // Antes de agregar los articulos al carrito podriamos comprobar si ese elemento ya existe en el carrito
+    // Si existe no lo agregamos al carrito solamente actualizamos la cantidad 
+    // sino existe si lo agregamos al carrito 
+
+    // 7. Revisa si un elemento existe en el carrito
+    const existe = articulosCarrito.some(producto => producto.id === infoProducto.id)
+    if (existe) {
+        // 7.3 Actualizamos la cantidad 
+        const productos =  articulosCarrito.map(producto => {
+            if(producto.id === infoProducto.id) {
+                producto.cantidad++; 
+                return producto; // Retorna el objeto actualizado
+            } else {
+                return producto; // retorna los elementos que no son duplicados
+            }
+        });
+        articulosCarrito = [...productos]
+    } else {
+        // 7.2 Agregamos el producto al carrito
+        articulosCarrito = [...articulosCarrito, infoProducto]
+    }
+
     // Una ves que se selecciona un producto  y se leen los datos
     // El paso siguiente es llenar ese arreglo (articulosCarrito) con los datos anteriores
-
-    // 5.2 Agregamos el producto al carrito
-    articulosCarrito = [...articulosCarrito, infoProducto]
+        // 5.2 Agregamos el producto al carrito
+        // articulosCarrito = [...articulosCarrito, infoProducto]
 
     // 5.3
     carritoHTML();
@@ -62,9 +96,10 @@ function leerDatosProducto(producto) {
 // 5.3 Muestra el carrito de compras en el HTML
 function carritoHTML() {
 
-    // 6.2 
+    // 6.4
     limpiarHTML();
-
+    
+    // 6. Recorre el carrito y genera el HTML
     articulosCarrito.forEach(producto => {
         const { imagen, titulo, precio, cantidad, id } = producto;
         const row = document.createElement('tr');
@@ -74,16 +109,16 @@ function carritoHTML() {
         <td>${precio}</td>
         <td>${cantidad}</td>
         <td>
-          <a href="#" class="borrar-curso" data-id="${id}"> X </a>
+          <a href="#" class="borrar-producto" data-id="${id}"> X </a>
         </td>
         `
 
-        // 5.4 Agrega el HTML del carrito en el tbody
+        // 6.2 Agrega el HTML del carrito en el tbody
         contenedorCarrito.appendChild(row);
     });
 }
 
-// 6. Eliminar los productos del tbody
+// 6. 3 Eliminar los productos del tbody
 function limpiarHTML() {
     while (contenedorCarrito.firstChild) {
         contenedorCarrito.removeChild(contenedorCarrito.firstChild)
