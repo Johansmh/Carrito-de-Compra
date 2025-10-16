@@ -19,6 +19,13 @@ function cargarEventListener() {
     // 8. Elimina productos del carrito
     carrito.addEventListener('click', eliminarProducto)
 
+    // Muestra los productos del Local Storage
+    document.addEventListener('DOMContentLoaded', () => {
+        articulosCarrito = JSON.parse(localStorage.getItem('carrito')) || []; 
+
+        carritoHTML();
+    })
+
     // 9. Vaciar carrito
     vaciarCarritoBtn.addEventListener('click', () => {
         articulosCarrito = []; // reseteamos el arreglo
@@ -124,6 +131,13 @@ function carritoHTML() {
         // 6.2 Agrega el HTML del carrito en el tbody
         contenedorCarrito.appendChild(row);
     });
+
+    // Agregar carrito de compras al storage
+    sincronizarStorage();
+}
+
+function sincronizarStorage() {
+    localStorage.setItem('carrito', JSON.stringify(articulosCarrito));
 }
 
 // 6. 3 Eliminar los productos del tbody
